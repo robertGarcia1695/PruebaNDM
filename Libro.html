@@ -1,0 +1,356 @@
+<html><head>
+        <title>Libro de Reclamaciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+        <link href="custom.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 py-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Libro de reclamaciones virtual</h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <h3>Hoja de reclamación Nº 000000001-01</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <h5>Fecha: 20 de febrero del 2021</h5>
+                        </div>
+                    </div>
+                    <form id="contact-form" method="post" action="reclamo.php" role="form" novalidate="true">
+                        <input type="hidden" name="NumeroHoja" value="000000001-01">  
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <p class="lead bdr-title">Identificación del consumidor reclamante:</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-error has-danger">
+                                        <label for="form_nombre">Nombres *</label>
+                                        <input id="form_nombre" type="text" name="Nombre" class="form-control" placeholder="Por favor ingrese su nombre *" required="required" data-error="El nombre es requerido.">
+                                        <div class="help-block with-errors"><ul class="list-unstyled"><li>El nombre es requerido.</li></ul></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-error has-danger">
+                                        <label for="form_apepaterno">Apellido paterno *</label>
+                                        <input id="form_apepaterno" type="text" name="ApePaterno" class="form-control" placeholder="Por favor ingrese su apellido *" required="required" data-error="El apellido paterno es requerido.">
+                                        <div class="help-block with-errors"><ul class="list-unstyled"><li>El apellido paterno es requerido.</li></ul></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group has-error has-danger">
+                                        <label for="form_apematerno">Apellido materno *</label>
+                                        <input id="form_apematerno" type="text" name="ApeMaterno" class="form-control" placeholder="Por favor ingrese su apellido *" required="required" data-error="El apellido materno es requerido.">
+                                        <div class="help-block with-errors"><ul class="list-unstyled"><li>El apellido materno es requerido.</li></ul></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="form_tipodoc">Tipo de Doc. *</label>
+                                        <select id="form_tipodoc" name="TipoDoc" class="form-control" required="required" data-error="Elija su tipo de documento">
+                                            <option value="DNI">DNI</option>
+                                            <option value="Pasaporte">Pasaporte</option>
+                                            <option value="Carne Extranjeria">Carné de Extranjería</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="form_numdoc">Número de Documento *</label>
+                                        <input id="form_numdoc" type="text" name="NumDoc" class="form-control" placeholder="Por favor ingrese su documento *" required="required" data-error="Numero de documento es requerido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="Email" class="form-control" placeholder="Por favor ingrese su email *" required="required" data-error="El email es requerido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="form_departamento">Departamento *</label>
+                                        <div class="selector_dep">
+                                            <select id="form_departamento" name="Departamento" class="form-control" required="required" data-error="Por favor elija su departamento."><option value="0">Seleccionar Departamento</option><option value="1">AMAZONAS</option><option value="2">ANCASH</option><option value="3">APURIMAC</option><option value="4">AREQUIPA</option><option value="5">AYACUCHO</option><option value="6">CAJAMARCA</option><option value="7">CALLAO</option><option value="8">CUSCO</option><option value="9">HUANCAVELICA</option><option value="10">HUANUCO</option><option value="11">ICA</option><option value="12">JUNIN</option><option value="13">LA LIBERTAD</option><option value="14">LAMBAYEQUE</option><option value="15">LIMA</option><option value="16">LORETO</option><option value="17">MADRE DE DIOS</option><option value="18">MOQUEGUA</option><option value="19">PASCO</option><option value="20">PIURA</option><option value="21">PUNO</option><option value="22">SAN MARTIN</option><option value="23">TACNA</option><option value="24">TUMBES</option><option value="25">UCAYALI</option></select>
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        url: "cascade/departamento.php",
+                                                        success: function(response){
+                                                            $('.selector_dep select').html(response).fadeIn();
+                                                        }
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="form_provincia">Provincia *</label>
+                                        <div class="selector_pro">
+                                            <select id="form_provincia" name="Provincia" class="form-control" required="required" data-error="Por favor elija su provincia.">
+                                                <option value="0">Seleccionar</option>
+                                            </select>
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $(".selector_dep select").change(function() {
+                                                        var form_data = {
+                                                            is_ajax: 1,
+                                                            dep: +$(".selector_dep select").val()
+                                                        };
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "cascade/provincia.php",
+                                                            data: form_data,
+                                                            success: function(response){
+                                                                $('.selector_pro select').html(response).fadeIn();
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="form_distrito">Distrito *</label>
+                                        <div class="selector_dist">
+                                            <select id="form_distrito" name="Distrito" class="form-control" required="required" data-error="Por favor elija su distrito.">
+                                                <option value="0">Seleccionar</option>
+                                            </select>
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $(".selector_pro select").change(function() {
+                                                        var form_p = {
+                                                            is_ajax: 1,
+                                                            dist: +$(".selector_pro select").val()
+                                                        };
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "cascade/distrito.php",
+                                                            data: form_p,
+                                                            success: function(response){
+                                                                $('.selector_dist select').html(response).fadeIn();
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_direccion">Dirección *</label>
+                                        <input id="form_direccion" type="text" name="Direccion" class="form-control" placeholder="Por favor ingrese su dirección *" required="required" data-error="Dirección es requerido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_telefono">Teléfono fijo *</label>
+                                        <input id="form_telefono" type="text" name="Telefono" class="form-control" placeholder="Por favor ingrese su teléfono *" required="required" data-error="Telefono es requerido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_celular">Celular *</label>
+                                        <input id="form_celular" type="text" name="Celular" class="form-control" placeholder="Por favor ingrese su celular *" required="required" data-error="Celuar es requerido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_otrotelefono">Otro teléfono</label>
+                                        <input id="form_otrotelefono" type="text" name="OtroTelefono" class="form-control" placeholder="Por favor ingrese otro teléfono">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="MayorEdad" type="checkbox" value="1" id="MayorEdad">
+                                        <label class="form-check-label" for="MayorEdad">Soy menor de edad</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="form_nompadres">Nombres del padre o madre *</label>
+                                        <input id="form_nompadres" type="text" name="NomPadres" class="form-control" placeholder="Por favor ingrese el nombre de sus padres">
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <p class="lead bdr-title">Identificación del consumidor reclamante:</p>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="form_numboletafactura">Nº Boleta/Factura (opcional)</label>
+                                        <input id="form_numboletafactura" type="text" name="NumBoletaFactura" class="form-control" placeholder="Ingrese el número de boleta o factura">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="form_tienda">Colegio</label>
+                                        <select id="form_tienda" name="Tienda" class="form-control">
+                                            <!--<option value="" hidden>Elija la sede</option>-->
+                                            <option value="Santa Teresita Surco">Santa Teresita Surco</option>s
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="form_fechacompra">Fecha de Boleta/Factura (opcional)</label>
+                                        <input id="form_fechacompra" type="date" name="FechaCompra" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p class="lead bdr-title">Identificación del bien contratado:</p>
+                                
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="BienContratado" id="Producto" value="Producto" checked="">
+                                      <label class="form-check-label" for="Producto">
+                                        Producto
+                                      </label>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="BienContratado" id="Servicio" value="Servicio">
+                                      <label class="form-check-label" for="Servicio">
+                                        Servicio
+                                      </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="form_monto">Monto a reclamar (opcional)</label>
+                                        <input id="form_monto" type="text" name="Monto" class="form-control" placeholder="Por favor ingrese el monto">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_descripcion">Descripción *</label>
+                                        <textarea id="form_descripcion" name="Descripcion" class="form-control" placeholder="Por favor describa el bien *" rows="4" required="required" data-error="Por favor describa el bien."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="lead bdr-title">Detalle de la reclamación y pedido del consumidor:</p>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="ReclamoQueja" id="Reclamo" value="Reclamo" checked="">
+                                      <label class="form-check-label" for="Reclamo">
+                                        Reclamo: Disconformidad relacionada a los productos o servicios.
+                                      </label>
+                                    </div>                                
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="ReclamoQueja" id="Queja" value="Queja">
+                                      <label class="form-check-label" for="Queja">
+                                        Queja: Disconformidad no relacionada a los productos o servicios o malestar o descontento respecto a la atención al público.
+                                      </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_detalle">Detalle *</label>
+                                        <textarea id="form_detalle" name="Detalle" class="form-control" placeholder="Por favor detalle su reclamo o queja *" rows="6" required="required" data-error="Por favor detalle su reclamo o queja."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_pedido">Pedido *</label>
+                                        <textarea id="form_pedido" name="Pedido" class="form-control" placeholder="Por favor detalle su pedido *" rows="4" required="required" data-error="Por favor detalle su pedido."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn_env btn btn-success btn-send disabled" value="Registrar reclamo">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted">
+                                        <strong>*</strong> Estos campos son requeridos.</p>
+                                        <p class="text-muted">IMPORTANTE: Los datos consignados en el presente documento han sido proporcionados por el cliente, por lo tanto son veraces y de total conformidad del usuario.</p>
+                                        <p class="text-muted">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.</p>
+                                        <p class="text-muted">El provedor deberá dar respuesta al reclamo en un plazo no mayor de treinta (30) días calendario, pudiendo ampliar el plazo hasta por treinta (30) días más, previa comunicación al consumidor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.8 -->
+            </div>
+            <!-- /.row-->
+        </div>
+        <!-- /.container-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="js/validator.js"></script>
+        <script src="contact.js"></script>
+    
+
+</body></html>
